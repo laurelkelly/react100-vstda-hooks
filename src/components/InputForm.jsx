@@ -31,6 +31,7 @@ function InputForm(props) {
                         name='desc1' 
                         type='text'
                         id='desc1' 
+                        placeholder='Add an item'
                         value={name}
                         onChange={handleNameChange}
                     ></textarea>

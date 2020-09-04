@@ -23,7 +23,7 @@ export default function TodoItem(props) {
     }
  
     const updatingTemplate = (
-        <form className={FormColor(props.priority)} onSubmit={handleSubmit} id='update-form'>
+        <form className={FormColor(newPriority)} onSubmit={handleSubmit} id='update-form'>
             <div className='form-group'>
                 <label htmlFor={props.id}><strong>Description</strong></label>
                 <textarea 
