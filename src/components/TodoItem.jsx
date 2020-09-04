@@ -15,6 +15,7 @@ export default function TodoItem(props) {
 
     function handleSubmit(e) {
         e.preventDefault();
+        if(newName === '') return;
         props.updateTask(props.id, newName, newPriority);
         setNewName('');
         setNewPriority('1');

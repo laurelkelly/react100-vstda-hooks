@@ -14,6 +14,7 @@ function InputForm(props) {
 
     function handleSubmit(e) {
         e.preventDefault();
+        if(name === '') return;
         props.addTask(name, priority);
         setName('');
         setPriority('1');
