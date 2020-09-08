@@ -69,7 +69,10 @@ export default function TodoItem(props) {
                     value='1' 
                     defaultChecked={props.completed}
                     onChange={() => props.toggleTaskCompleted(props.id)}
-                /><strong className='check-label'>
+                /><strong 
+                    className='check-label'
+                    style={{ textDecoration: completedStrikethrough(props.completed) }}
+                >
                     {props.name}
                 </strong>
             </label>
@@ -113,6 +116,14 @@ export default function TodoItem(props) {
             return 'list-group-item-warning clearfix'
         } else if (priority == 4) {
             return 'list-group-item-success clearfix'
+        }
+    }
+
+    function completedStrikethrough(completed) {
+        if (completed) {
+            return "line-through";
+        } else {
+            "none"
         }
     }
 
